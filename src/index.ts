@@ -7,7 +7,7 @@ dotenv.config();
 const port = process.env.PORT ?? 3000;
 const app = express();
 
-const token = process.env.TOKEN as string; // gotten from "BotFather" on Telegram
+const token = process.env.TOKEN as string; // token gotten from "BotFather" on Telegram
 const bot = new TelegramBot(token, { polling: true });
 configureBot(bot);
 

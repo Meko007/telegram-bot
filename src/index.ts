@@ -9,7 +9,6 @@ const app = express();
 
 const token = process.env.TOKEN as string; // token gotten from "BotFather" on Telegram
 const bot = new TelegramBot(token, { polling: true });
-configureBot(bot);
 
 app.get('/', (req, res) => {
     res.send('Ndeewo');
@@ -17,4 +16,5 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
     console.log(`server is listening on port ${port}`);
+    configureBot(bot);
 });
